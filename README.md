@@ -37,7 +37,8 @@ Complete all of the questions in the `challenges.js` file.
 
 - [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects)
 - [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals] Template Literals.
--[https://codeburst.io/javascript-passing-by-value-vs-reference-explained-in-plain-english-8d00fd06a47c] - JavaScript Passing By Value And Passing By Refference.
+- [https://codeburst.io/javascript-passing-by-value-vs-reference-explained-in-plain-english-8d00fd06a47c] - JavaScript Passing By Value And Passing By Refference.
+- [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment] - Destructuring Assignment MDN.
 
 ## Notes
 

@@ -97,7 +97,9 @@ Finish filling out the statement below.
 From now, on we will be switching between template literals
 and quotations for console.logs.
 ------------------*/
+
  console.log(`The book ${book.title} was written by ${book.author} and is ${book.pages} pages.`);
+ console.log(`The book ${book["title"]} was written by ${book["author"]} and is ${book["pages"]} pages`);
 
 /*------------------
 6)
@@ -108,7 +110,7 @@ if you forgot how to access values from
 nested objects.
 ------------------*/
 
-let user = {
+const user = {
   id: 101,
   email: "sofia@dev.com",
   personalInfo: {
@@ -131,6 +133,28 @@ console.log(`${user["personalInfo"]["name"]} lives at ${user["personalInfo"]["ad
 ${user["personalInfo"]["address"]["line2"]}, ${user["personalInfo"]["address"]["city"]}, 
 ${user["personalInfo"]["address"]["country"]}.`)
 
+// Object Destructuring dot notation
+
+// const name1 = user.personalInfo.name
+// const address1 = user.personalInfo.address.line1
+// const address2 = user.personalInfo.address.line2
+// const city = user.personalInfo.address.city
+// const country = user.personalInfo.address.country
+
+// console.log("Object Destructuring:",`${name1} lives at ${address1} ${address2} ${city} ${country}`)
+
+// Code refactored // more destructuring inside object 
+// without creating variable
+
+const {
+  personalInfo:{
+    name,
+    address: { line1, line2, city, country },
+  },
+} = user;
+
+console.log("Destructured:", 
+`${name} lives at ${line1} ${line2}, ${city}, ${country}.`)
 
 /*------------------
 7)
@@ -203,6 +227,18 @@ console.log(
  and is very ${animal.isActive} plus it has ${animal.siblings} siblings.`
 );
 
+// Object Destructuring bracket notation
+
+const name2 = animal["name"]
+const likes_1 = animal["food"]["likes"]["like_1"]
+const active = animal["isActive"]
+const siblings = animal["siblings"]
+
+console.log("Object Destructuring",
+  `My pet name is ${name2} it likes ${likes_1}
+  & swimming and is very ${active} plus it has ${siblings} siblings.`
+)
+
 /*------------------
 9)
 Update at least one value
@@ -259,3 +295,23 @@ Make sure your code still works!
 ------------------*/
 
 // Find Solution behind every problem. 
+
+// Class Review
+
+const myName = {
+  name: "Vennela"
+};
+
+const NAME_PROPERTY = "name";
+
+myName[NAME_PROPERTY] = "Vennela Lingam"; // Setting a value
+
+console.log(myName[NAME_PROPERTY]); // Getting a value ie.,
+// accessing and reading a value
+
+// defining an object and property that is pointed 
+// by a key or variable. => used in React
+const you = {
+  [NAME_PROPERTY]: "Bhoomi"
+};
+console.log(you.name)
